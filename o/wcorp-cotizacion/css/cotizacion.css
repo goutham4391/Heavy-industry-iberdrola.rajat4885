@@ -1,0 +1,950 @@
+/****************/
+/*	  BOLSA	 	*/
+/****************/
+#decCotizacionBolsa{
+	position:
+	relative;
+	height: auto !important;
+	overflow: hidden;
+	border-bottom-right-radius: 21px;
+	margin-top: -20px;
+}
+div.bolsa {
+	float: left;
+	background-color: #f4f8ee;
+	width: 100% !important;
+	text-align: left;
+	padding-right: 25.5%;
+	min-height: 45px;
+}
+
+#decContenedorSubhome div.bolsa {
+	position: relative;
+    overflow: hidden;
+}
+
+.bolsa > .bolsaIbex:first-child{
+	z-index: 100;
+	position: relative;
+	padding-top: 12px;
+}
+div.bolsa .bolsaIbex {
+	font-weight: normal;
+	display: inline-block;
+	font-size: 14px;
+	color:#9b9b9b;
+	padding-left: 12px;
+}
+div.bolsa dt.bolsaIbex{
+    color: #427314;
+}
+div.bolsa .bolsaIbex span.valor{
+    color: #5c881a;
+}
+div.bolsa .bolsaIbex span.fechaHora{
+    color: #38424a;
+}
+
+div.bolsa .tituloCotizacion,
+div.bolsa .tituloCotizacionCorto,
+div.bolsa .valor {
+	color: #5c881a;
+	font-family: Dialog, sans-serif;
+	font-size: 13px;
+	letter-spacing: 1.18px;
+}
+
+div.bolsa .fechaHora {
+	color: #38424a;
+}
+
+div.bolsa .tituloCotizacion,
+div.bolsa .tituloCotizacionCorto,
+div.bolsa .fechaHora {
+	border-right: 1px #B5C698 solid;
+}
+
+div.bolsa .tituloCotizacion:hover {
+	text-decoration: underline;
+}
+
+div.bolsa .tituloCotizacion.no-link:hover {
+    text-decoration: none;
+    cursor: default;
+}
+
+div.bolsa .tituloCotizacionCorto {
+	display: none;
+}
+
+div.bolsa span {
+	padding: 0 0.45em 0 0;
+}
+
+div.bolsa dl {
+	margin-bottom: 0;
+	display: inline-block;	
+}
+.enlaceAccionistas>a, .enlaceGobiernoCorporativo>a{
+	 color: #417406;
+	 font-family: Dialog, sans-serif;
+}
+.enlaceAccionistas{
+   	color: #417406;
+    position: absolute;
+    height: 40px;
+    font-size: 11px;
+    top: 0px;
+    margin-left: 0px;
+    padding: 13px 0px 15px 0px;
+    text-align: center;
+    z-index: 50;
+    width: 200px;
+    white-space: nowrap;
+}
+.enlaceAccionistas:hover{
+   	background-color: #b5c7a0;
+   	height:45px;
+}
+.line{
+    position: absolute;
+    left: 199px;
+    top: 13px;
+    padding: 10px 0px 5px;
+    border-left: 1px #b5c7a0 solid;
+    z-index: 50;
+}
+.enlaceGobiernoCorporativo{
+   	color: #417406;
+   	position: absolute;
+	height: 45px;
+    font-size: 11px;
+    left: 199px;
+    top: 0px;
+    margin-left: 0px;
+   	padding: 13px 20px 15px;
+    text-align: center;
+    z-index: 50;
+    width: 185px;
+    white-space: nowrap;
+}
+.enlaceGobiernoCorporativo:hover{
+   	background-color: #b5c7a0;
+   	height:45px;
+}
+.scroll-left2{
+	display: inline;
+	width: 100%;
+}
+
+.hiddenTicker{
+    background: #fbfbf1;
+    width: 430px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+.contMoverDesktop{
+	display: inline-block;
+	position: absolute;
+	width: 105% !important;
+	padding-top: 10px;
+	/* Starting position */
+	-moz-transform:translate3d(0, 0, 0);
+	-webkit-transform:translate3d(0, 0, 0);
+	transform:
+	translate3d(0, 0, 0);
+	
+	/* Applicar animacion */
+	-moz-animation: scroll-left 15s;
+	-webkit-animation: scroll-left 15s;
+	animation: scroll-left 15s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+div.boton_play_ticker > img{
+	width: 27px;
+	height: 28px;
+}
+@-moz-keyframes scroll-left {
+		0%   { -moz-transform: translate3d(50%, 0, 0); visibility: visible; }
+		100% { -moz-transform: translate3d(-80%, 0, 0); }
+	}
+@-webkit-keyframes scroll-left {
+	0%   { -webkit-transform: translate3d(50%, 0, 0); visibility: visible; }
+	100% { -webkit-transform: translate3d(-80%, 0, 0); }
+	}
+@keyframes scroll-left {
+	0% {
+		-webkit-transform: translate3d(50%, 0, 0);
+		transform: translate3d(50%, 0, 0);
+		visibility: visible;
+	}
+	100% {
+    	-webkit-transform: translate3d(-80%, 0, 0);
+    	transform: translate3d(-80%, 0, 0);
+  	}
+}
+
+#decContenedorSubhome .contMoverDesktop{
+	/* Applicar animacion */	
+	-moz-animation: scroll-left-dos 15s;
+	-webkit-animation: scroll-left-dos 15s;
+	animation: scroll-left-dos 15s;
+	-webkit-animation-iteration-count: infinite; 
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+}
+
+@-moz-keyframes scroll-left-dos {
+		0%   { -moz-transform: translate3d(50%, 0, 0); visibility: visible; }
+		100% { -moz-transform: translate3d(-80%, 0, 0); }
+	}
+@-webkit-keyframes scroll-left-dos {
+	0%   { -webkit-transform: translate3d(50%, 0, 0); visibility: visible; }
+	100% { -webkit-transform: translate3d(-80%, 0, 0); }
+	}
+@keyframes scroll-left-dos {
+	0% {
+		-webkit-transform: translate3d(50%, 0, 0);
+		transform: translate3d(50%, 0, 0);
+		visibility: visible;
+	}
+	100% {
+    	-webkit-transform: translate3d(-80%, 0, 0);
+    	transform: translate3d(-80%, 0, 0);
+  	}
+}
+
+.boton_play_ticker{
+	background-color: #f4f8ee;
+	width: 70px;
+	height: 45px;
+	position: absolute;
+	z-index: 51;
+	left: 93%;
+	padding: 10px 7px 10px 10px;
+	border-bottom-right-radius: 21px;
+}
+/*Para pantallas superior ha 1860px */
+@media screen and (min-width: 116.188em){
+	#decContenedorSubhome > #decCotizacionBolsa > div.enlaceAccionistas {
+		    height: 43px;
+    		width: 241px;
+	}
+}
+/*Para pantallas inferiores ha 1700*/
+@media screen and (max-width: 106.25em){
+	div.bolsa {
+		padding-right: 25.5%;
+	}	
+}
+/*Para pantallas superior ha 1600px */
+@media screen and (min-width: 100em){	
+	.boton_play_ticker{		
+		left: 95% !important;	
+	}
+}
+/*Para pantallas superior ha 1500px */
+@media screen and (min-width: 93.688em){
+	#decContenedorSubhome > #decCotizacionBolsa > div.enlaceAccionistas {
+		height: 45px;
+	}
+	.boton_play_ticker{
+		/* background-color: #f6f4f5; */		
+		height: 50px;
+		position: absolute;
+		z-index: 51;
+		left: 94%;
+		padding: 10px 7px 10px 10px;
+	}
+}
+/*Para pantallas inferior ha 1450px */
+@media screen and (max-width: 90.625em){
+	.boton_play_ticker{		
+		left: 92%;		
+	}
+	div.bolsa {
+		padding-right: 25.5%;			
+	}	
+	.contMoverDesktop {
+		width: 112% !important;
+	}
+	@-moz-keyframes scroll-left {
+		0%   { -moz-transform: translate3d(42%, 0, 0); visibility: visible; }
+		100% { -moz-transform: translate3d(-100%, 0, 0); }
+	}
+	@-webkit-keyframes scroll-left {
+		0%   { -webkit-transform: translate3d(42%, 0, 0); visibility: visible; }
+		100% { -webkit-transform: translate3d(-100%, 0, 0); }
+	}
+	@keyframes scroll-left {
+		0% {
+			-webkit-transform: translate3d(42%, 0, 0);
+			transform: translate3d(45%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+			-webkit-transform: translate3d(-100%, 0, 0);
+			transform: translate3d(-92%, 0, 0);
+		}
+	}
+	#decContenedorSubhome .contMoverDesktop{
+	/* Applicar animacion */	
+	-moz-animation: scroll-left-dos 15s;
+	-webkit-animation: scroll-left-dos 15s;
+	animation: scroll-left-dos 15s;
+	-webkit-animation-iteration-count: infinite; 
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+	}
+
+	@-moz-keyframes scroll-left-dos {
+			0%   { -moz-transform: translate3d(43%, 0, 0); visibility: visible; }
+			100% { -moz-transform: translate3d(-100%, 0, 0); }
+		}
+	@-webkit-keyframes scroll-left-dos {
+		0%   { -webkit-transform: translate3d(43%, 0, 0); visibility: visible; }
+		100% { -webkit-transform: translate3d(-100%, 0, 0); }
+		}
+	@keyframes scroll-left-dos {
+		0% {
+			-webkit-transform: translate3d(43%, 0, 0);
+			transform: translate3d(43%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+			-webkit-transform: translate3d(-100%, 0, 0);
+			transform: translate3d(-100%, 0, 0);
+		}
+	}
+}
+/*Para pantallas inferior ha 1317px */
+@media screen and (min-width: 82.313em){
+	.bolsa{
+		text-align: center;
+	}
+
+}
+
+/*Para pantallas inferior ha 1255px */
+@media screen and (max-width: 78.4375em){
+	.enlaceAccionistas {
+		left: 0;
+		width: 200px;
+	}
+	.line {
+    	left: 199px;
+    }
+    .enlaceGobiernoCorporativo {
+    	left: 199px;
+    	background-color: #f6f4f5;
+    }
+	div.bolsa {
+		padding-right: 25.5%;
+
+	}
+	.hiddenTicker{
+		width: 50%;
+	}
+}
+/*Para pantallas menores de 1190*/
+@media screen and (max-width: 74.125em){
+	#decContenedorSubhome > #decCotizacionBolsa > div.enlaceAccionistas, .enlaceGobiernoCorporativo{
+	 	height: 45px;
+		width: 185px;
+	}
+	#decContenedorSubhome > #decCotizacionBolsa > div.enlaceAccionistas{
+			height: 45px;
+			width: 236px;
+		}
+
+		#decContenedorSubhome > #decCotizacionBolsa div.bolsa {
+			padding: 0.8% 16.5% 0 17.2%;
+		}
+		.hiddenTicker{
+			width: 33%;
+		}
+}
+
+/* Para pantallas inferior a 1290px */
+@media screen and (max-width: 80.625em){	
+	.contMoverDesktop {
+	    -moz-transform: none !important;
+	    -webkit-transform: none !important;
+	    transform: none !important;
+	    -moz-animation: none !important;
+	    -webkit-animation: none !important;
+	    animation: none !important;
+    	width: 845px !important;
+    	display: inline;
+    }
+    .hiddenTicker2{
+	    background: #f1f7e9;
+	    width: 44.5%;
+	    height: 45px;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    z-index: 50;
+    }
+    #decCotizacionBolsa .scroll-left {
+		 height: 45px;	
+		 position: relative;
+		 border-right:0;
+		 overflow: hidden;	
+		 background: #f1f7e9;	 
+	}
+	
+	.contMover {
+		position: absolute;
+		width: 1300px;
+		height: 45px;
+		/* Starting position */
+		-moz-transform:translate3d(0, 0, 0);
+		-webkit-transform:translate3d(0, 0, 0);
+		transform:translate3d(0, 0, 0);
+
+		/* Aplica la animacion*/	
+		-moz-animation: scroll-left 15s;
+		-webkit-animation: scroll-left 15s;
+		animation: scroll-left 15s;
+		-webkit-animation-iteration-count: infinite; 
+				animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+				animation-timing-function: linear;
+	}
+	
+	div.bolsa {
+		float: left;
+		background-color: #f1f7e9;	
+		text-align: center;
+		padding-left: 20%;
+	}
+	#decContenedorHome .hiddenTicker{
+		background: 59% !important;
+	}
+	#decContenedorSubhome div.bolsa{
+		width: 150em !important;
+	}
+	#decContenedorSubhome .hiddenTicker2{
+	    width: 29.5% !important;
+	}
+	#decContenedorSubhome .hiddenTicker{
+		width: 59% !important;
+	}
+	/* Move it (define the animation) */
+	@-moz-keyframes scroll-left {
+		0%   { -moz-transform: translate3d(15%, 0, 0); }
+		100% { -moz-transform: translate3d(-130%, 0, 0); }
+	}
+	@-webkit-keyframes scroll-left {
+		0%   { -webkit-transform: translate3d(15%, 0, 0); }
+		100% { -webkit-transform: translate3d(-130%, 0, 0); }
+	}
+	@keyframes scroll-left {
+		0% {
+			-webkit-transform: translate3d(15%, 0, 0);
+			transform: translate3d(15%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+    		-webkit-transform: translate3d(-130%, 0, 0);
+    		transform: translate3d(-130%, 0, 0);
+  		}
+	}
+	
+	#decContenedorSubhome .contMover{
+	/* Applicar animacion */	
+	-moz-animation: scroll-left-dos 15s;
+	-webkit-animation: scroll-left-dos 15s;
+	animation: scroll-left-dos 15s;
+	-webkit-animation-iteration-count: infinite; 
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+	}
+
+	@-moz-keyframes scroll-left-dos {
+			0%   { -moz-transform: translate3d(30%, 0, 0); visibility: visible; }
+			100% { -moz-transform: translate3d(-130%, 0, 0); }
+		}
+	@-webkit-keyframes scroll-left-dos {
+		0%   { -webkit-transform: translate3d(30%, 0, 0); visibility: visible; }
+		100% { -webkit-transform: translate3d(-130%, 0, 0); }
+		}
+	@keyframes scroll-left-dos {
+		0% {
+			-webkit-transform: translate3d(30%, 0, 0);
+			transform: translate3d(30%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+			-webkit-transform: translate3d(-130%, 0, 0);
+			transform: translate3d(-130%, 0, 0);
+		}
+	}
+	
+	
+}
+@media screen and (max-width: 71.063em){	
+	.contMoverDesktop {	
+		padding-top: 10px;
+	}
+}
+/* Para pantallas inferior a 1240px */
+@media screen and (max-width: 77.5em){
+	.contMoverDesktop {	 
+		padding-top: 12px;  	
+    }	
+	.hiddenTicker2{
+	    width: 385px;
+	   }
+	.boton_play_ticker{		
+		height: 50px;
+		position: absolute;
+		z-index: 51;
+		left: 91%;
+		padding: 10px 7px 10px 15px;
+	}
+	div.bolsa .bolsaIbex {
+		padding-left: 4px;
+	}
+	/* Move it (define the animation) */
+	@-moz-keyframes scroll-left {
+		0%   { -moz-transform: translate3d(20%, 0, 0); }
+		100% { -moz-transform: translate3d(-125%, 0, 0); }
+	}
+	@-webkit-keyframes scroll-left {
+		0%   { -webkit-transform: translate3d(20%, 0, 0); }
+		100% { -webkit-transform: translate3d(-125%, 0, 0); }
+	}
+	@keyframes scroll-left {
+		0% {
+			-webkit-transform: translate3d(20%, 0, 0);
+			transform: translate3d(20%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+    		-webkit-transform: translate3d(-125%, 0, 0);
+    		transform: translate3d(-125%, 0, 0);
+  		}
+	}
+	
+	@-moz-keyframes scroll-left-dos {
+			0%   { -moz-transform: translate3d(7%, 0, 0); visibility: visible; }
+			100% { -moz-transform: translate3d(-130%, 0, 0); }
+		}
+	@-webkit-keyframes scroll-left-dos {
+		0%   { -webkit-transform: translate3d(7%, 0, 0); visibility: visible; }
+		100% { -webkit-transform: translate3d(-130%, 0, 0); }
+		}
+	@keyframes scroll-left-dos {
+		0% {
+			-webkit-transform: translate3d(7%, 0, 0);
+			transform: translate3d(7%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+			-webkit-transform: translate3d(-130%, 0, 0);
+			transform: translate3d(-130%, 0, 0);
+		}
+	}
+}
+
+/* Para pantallas inferior a 974px */
+@media screen and (max-width: 60.875em){
+	#decCotizacionBolsa .scroll-left{
+		padding-top: 12px;
+	}
+	.contMoverDesktop {
+		padding-top: 0px;
+	}
+	.contMover {
+		position: absolute;
+		width: 1400px;
+		height: 100px;
+		/* Starting position */
+		-moz-transform:translate3d(0, 0, 0);
+		-webkit-transform:translate3d(0, 0, 0);	
+		transform:translate3d(0, 0, 0);
+		/* Apply animation to this element */	
+		-moz-animation: scroll-left 15s linear infinite;
+		-webkit-animation: scroll-left 15s linear infinite;
+		animation: scroll-left 15s linear infinite;
+		display: inline;		
+	}
+	/* Move it (define the animation) */
+	@-moz-keyframes scroll-left {
+		0%   { -moz-transform: translate3d(17%, 0, 0); }
+		100% { -moz-transform: translate3d(-120%, 0, 0); }
+	}
+	@-webkit-keyframes scroll-left {
+		0%   { -webkit-transform: translate3d(17%, 0, 0); }
+		100% { -webkit-transform: translate3d(-120%, 0, 0); }
+	}
+	@keyframes scroll-left {
+		0% {
+			-webkit-transform: translate3d(17%, 0, 0);
+			transform: translate3d(17%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+    		-webkit-transform: translate3d(-120%, 0, 0);
+    		transform: translate3d(-120%, 0, 0);
+  		}
+	}
+	
+	#decContenedorSubhome .contMover{
+	/* Applicar animacion */	
+	-moz-animation: scroll-left-dos 15s;
+	-webkit-animation: scroll-left-dos 15s;
+	animation: scroll-left-dos 15s;
+	-webkit-animation-iteration-count: infinite; 
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+	}
+
+	@-moz-keyframes scroll-left-dos {
+			0%   { -moz-transform: translate3d(5%, 0, 0); visibility: visible; }
+			100% { -moz-transform: translate3d(-125%, 0, 0); }
+		}
+	@-webkit-keyframes scroll-left-dos {
+		0%   { -webkit-transform: translate3d(5%, 0, 0); visibility: visible; }
+		100% { -webkit-transform: translate3d(-125%, 0, 0); }
+		}
+	@keyframes scroll-left-dos {
+		0% {
+			-webkit-transform: translate3d(5%, 0, 0);
+			transform: translate3d(5%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+			-webkit-transform: translate3d(-125%, 0, 0);
+			transform: translate3d(-125%, 0, 0);
+		}
+	}
+	
+	div.bolsa dl.bolsaIbex:first-of-type img{
+		margin-right: 3%;
+	}
+	
+	div.bolsa .bolsaIbex{
+		display:inline;
+	}
+	.hiddenTicker2{
+		width: 385px;
+	}
+	.boton_play_ticker{			
+		height: 50px;
+		position: absolute;
+		z-index: 51;
+		left: 89%;
+		padding: 0px 7px 10px 20px;
+		margin-top: -5px;
+	}
+}
+/* Para pantallas inferior a 920px */
+@media screen and (max-width: 57.5em){
+	.boton_play_ticker{
+		left: 94%;
+	}
+	#decContenedorHome #decCotizacionBolsa {
+		width: 100%;
+		border-bottom-left-radius: 21px;
+		border-bottom-right-radius: 0;
+		margin-top: 0px;	
+		margin-bottom: 10px;	
+	}
+	nav.menu_secundario.navbar.navbar-light.justify-content-end{
+		padding: 0 0 0.5rem 0.1rem;
+	}
+	.contMoverDesktop{
+		padding-top: 0;
+		margin-left: -30px;
+	}
+	
+	/* Move it (define the animation) */
+	@-moz-keyframes scroll-left {
+		0%   { -moz-transform: translate3d(30%, 0, 0); }
+		100% { -moz-transform: translate3d(-130%, 0, 0); }
+	}
+	@-webkit-keyframes scroll-left {
+		0%   { -webkit-transform: translate3d(30%, 0, 0); }
+		100% { -webkit-transform: translate3d(-130%, 0, 0); }
+	}
+	@keyframes scroll-left {
+		0% {
+			-webkit-transform: translate3d(30%, 0, 0);
+			transform: translate3d(30%, 0, 0);
+			visibility: visible;	
+}
+		100% {
+    		-webkit-transform: translate3d(-130%, 0, 0);
+    		transform: translate3d(-130%, 0, 0);
+    		-moz-transform: translate3d(-130%, 0, 0);
+    		-ms-transform: translate3d(-130%, 0, 0);
+    		-o-transform: translate3d(-130%, 0, 0);
+}
+	}
+	@-moz-keyframes scroll-left-dos {
+			0%   { -moz-transform: translate3d(30%, 0, 0); visibility: visible; }
+			100% { -moz-transform: translate3d(-130%, 0, 0); }
+		}
+	@-webkit-keyframes scroll-left-dos {
+		0%   { -webkit-transform: translate3d(30%, 0, 0); visibility: visible; }
+		100% { -webkit-transform: translate3d(-130%, 0, 0); }
+		}
+	@keyframes scroll-left-dos {
+		0% {
+			-webkit-transform: translate3d(-130%, 0, 0);
+			transform: translate3d(-130%, 0, 0);
+			visibility: visible;
+			-moz-transform: translate3d(-130%, 0, 0);
+			-ms-transform: translate3d(-130%, 0, 0);
+			-o-transform: translate3d(-130%, 0, 0);
+}
+		100% {
+			-webkit-transform: translate3d(-130%, 0, 0);
+			transform: translate3d(-130%, 0, 0);
+			-moz-transform: translate3d(-130%, 0, 0);
+			-ms-transform: translate3d(-130%, 0, 0);
+			-o-transform: translate3d(-130%, 0, 0);
+}
+	}	
+		
+}
+/* Para pantallas inferior a 880px */
+@media screen and (max-width: 55em) {	
+	.enlaceAccionistas, .enlaceGobiernoCorporativo, .line, .hiddenTicker, .hiddenTicker2{
+		display: none;
+	}
+	.contMoverDesktop{
+		padding-top: 0;
+	}
+	.boton_play_ticker{	
+		width: 60px;
+		height: 50px;
+		position: absolute;
+		z-index: 51;
+		left: 94%;
+		padding: 0px 7px 10px 5px;
+		margin-top: -5px;		
+	}
+		/* Move it (define the animation) */
+		@-moz-keyframes scroll-left {
+			0%   { -moz-transform: translate3d(15%, 0, 0); }
+			100% { -moz-transform: translate3d(-125%, 0, 0); }
+		}
+		@-webkit-keyframes scroll-left {
+			0%   { -webkit-transform: translate3d(15%, 0, 0); }
+			100% { -webkit-transform: translate3d(-125%, 0, 0); }
+		}
+		@keyframes scroll-left {
+			0% {
+				-webkit-transform: translate3d(15%, 0, 0);
+				transform: translate3d(15%, 0, 0);
+				visibility: visible;
+			}
+			100% {
+				-webkit-transform: translate3d(-125%, 0, 0);
+				transform: translate3d(-125%, 0, 0);
+			  }
+		}
+		@-moz-keyframes scroll-left-dos {
+				0%   { -moz-transform: translate3d(-10%, 0, 0); visibility: visible; }
+				100% { -moz-transform: translate3d(-150%, 0, 0); }
+			}
+		@-webkit-keyframes scroll-left-dos {
+			0%   { -webkit-transform: translate3d(-10%, 0, 0); visibility: visible; }
+			100% { -webkit-transform: translate3d(-150%, 0, 0); }
+			}
+		@keyframes scroll-left-dos {
+			0% {
+				-webkit-transform: translate3d(-10%, 0, 0);
+				transform: translate3d(-10%, 0, 0);
+				visibility: visible;
+			}
+			100% {
+				-webkit-transform: translate3d(-150%, 0, 0);
+				transform: translate3d(-150%, 0, 0);
+			}
+	}
+}	
+/* Para pantallas inferior a 768px(mobile) */
+@media screen and (max-width: 48.0625em) {	
+	.enlaceAccionistas, .enlaceGobiernoCorporativo, .line, .hiddenTicker, .hiddenTicker2{
+		display: none;
+	}
+	.contMoverDesktop{
+		padding-top: 0;
+	}
+	.boton_play_ticker{	
+		width: 60px;
+		height: 50px;
+		position: absolute;
+		z-index: 51;
+		left: 94%;
+		padding: 0px 7px 10px 5px;
+		margin-top: -5px;		
+	}
+	/* Move it (define the animation) */
+	@-moz-keyframes scroll-left {
+		0%   { -moz-transform: translate3d(15%, 0, 0); }
+		100% { -moz-transform: translate3d(-125%, 0, 0); }
+	}
+	@-webkit-keyframes scroll-left {
+		0%   { -webkit-transform: translate3d(15%, 0, 0); }
+		100% { -webkit-transform: translate3d(-125%, 0, 0); }
+	}
+	@keyframes scroll-left {
+		0% {
+			-webkit-transform: translate3d(15%, 0, 0);
+			transform: translate3d(15%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+    		-webkit-transform: translate3d(-125%, 0, 0);
+    		transform: translate3d(-125%, 0, 0);
+  		}
+	}
+	@-moz-keyframes scroll-left-dos {
+			0%   { -moz-transform: translate3d(-10%, 0, 0); visibility: visible; }
+			100% { -moz-transform: translate3d(-150%, 0, 0); }
+		}
+	@-webkit-keyframes scroll-left-dos {
+		0%   { -webkit-transform: translate3d(-10%, 0, 0); visibility: visible; }
+		100% { -webkit-transform: translate3d(-150%, 0, 0); }
+		}
+	@keyframes scroll-left-dos {
+		0% {
+			-webkit-transform: translate3d(-10%, 0, 0);
+			transform: translate3d(-10%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+			-webkit-transform: translate3d(-150%, 0, 0);
+			transform: translate3d(-150%, 0, 0);
+		}
+	}
+}	
+/* ajuste boton play en pantallas menores de 625px(mobile)*/
+@media screen and (max-width: 39.0625em) {
+	.boton_play_ticker{
+		left: 91%;
+	}
+}
+/* ajuste boton play en pantallas menores de 414px(mobile)*/
+@media screen and (max-width: 25.875em) {
+	/* Move it (define the animation) */
+	@-moz-keyframes scroll-left {
+		0%   { -moz-transform: translate3d(-10%, 0, 0); }
+		100% { -moz-transform: translate3d(-125%, 0, 0); }
+	}
+	@-webkit-keyframes scroll-left {
+		0%   { -webkit-transform: translate3d(-10%, 0, 0); }
+		100% { -webkit-transform: translate3d(-125%, 0, 0); }
+	}
+	@keyframes scroll-left {
+		0% {
+			-webkit-transform: translate3d(-10%, 0, 0);
+			transform: translate3d(-10%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+    		-webkit-transform: translate3d(-125%, 0, 0);
+    		transform: translate3d(-125%, 0, 0);
+  		}
+	}
+	
+	@-moz-keyframes scroll-left-dos {
+			0%   { -moz-transform: translate3d(-30%, 0, 0); visibility: visible; }
+			100% { -moz-transform: translate3d(-150%, 0, 0); }
+		}
+	@-webkit-keyframes scroll-left-dos {
+		0%   { -webkit-transform: translate3d(-30%, 0, 0); visibility: visible; }
+		100% { -webkit-transform: translate3d(-150%, 0, 0); }
+		}
+	@keyframes scroll-left-dos {
+		0% {
+			-webkit-transform: translate3d(-30%, 0, 0);
+			transform: translate3d(-30%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+			-webkit-transform: translate3d(-150%, 0, 0);
+			transform: translate3d(-150%, 0, 0);
+		}
+	}
+}
+/* ajuste boton play en pantallas menores de 375px(mobile)*/
+@media screen and (max-width: 23.4375em) {
+	.boton_play_ticker{
+		left: 87%;
+	}
+	/* Move it (define the animation) */
+	@-moz-keyframes scroll-left {
+		0%   { -moz-transform: translate3d(-13%, 0, 0); }
+		100% { -moz-transform: translate3d(-125%, 0, 0); }
+	}
+	@-webkit-keyframes scroll-left {
+		0%   { -webkit-transform: translate3d(-13%, 0, 0); }
+		100% { -webkit-transform: translate3d(-125%, 0, 0); }
+	}
+	@keyframes scroll-left {
+		0% {
+			-webkit-transform: translate3d(-13%, 0, 0);
+			transform: translate3d(-13%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+    		-webkit-transform: translate3d(-125%, 0, 0);
+    		transform: translate3d(-125%, 0, 0);
+  		}
+	}
+	@-moz-keyframes scroll-left-dos {
+			0%   { -moz-transform: translate3d(-35%, 0, 0); visibility: visible; }
+			100% { -moz-transform: translate3d(-150%, 0, 0); }
+		}
+	@-webkit-keyframes scroll-left-dos {
+		0%   { -webkit-transform: translate3d(-35%, 0, 0); visibility: visible; }
+		100% { -webkit-transform: translate3d(-150%, 0, 0); }
+		}
+	@keyframes scroll-left-dos {
+		0% {
+			-webkit-transform: translate3d(-35%, 0, 0);
+			transform: translate3d(-35%, 0, 0);
+			visibility: visible;
+		}
+		100% {
+			-webkit-transform: translate3d(-150%, 0, 0);
+			transform: translate3d(-150%, 0, 0);
+		}
+	}
+}	
+
+@media screen and (min-width:120.43em){
+	div.bolsa dt.bolsaIbex {
+		padding-top: 8px;
+	}
+}
+/* IE ONLY */
+@media screen and (min-width:119em) and (-ms-high-contrast: active) and (-ms-high-contrast: none) {
+	div.bolsa dl{
+		margin-top: 7px;
+	}
+	div.bolsa dt.bolsaIbex {
+		padding-top: 0px;
+	}
+	div.bolsa {
+		padding: 25.5%;
+	}
+	
+}

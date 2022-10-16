@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HD_DESK_Home" transform="translate(-904.000000, -1105.000000)" fill="#45F500">
+            <g id="Bolsa-simple" transform="translate(0.000000, 1084.000000)">
+                <g id="IBEX-35-IBERDROLA-|--+-Flechas" transform="translate(520.000000, 18.000000)">
+                    <g id="Flechas" transform="translate(384.000000, 3.000000)">
+                        <g id="up-arrow">
+                            <polygon id="Shape-Copy" transform="translate(8.000000, 5.000000) scale(1, -1) translate(-8.000000, -5.000000) " points="16 0 0 0 8 10"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
